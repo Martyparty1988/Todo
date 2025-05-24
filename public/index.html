@@ -1,0 +1,38 @@
+<<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <title>Úkoly podle lokací</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+  <link rel="stylesheet" href="/src/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Úkoly podle lokací</h1>
+    <div class="tabs">
+      <button class="tab active" data-location="Podolí">Podolí</button>
+      <button class="tab" data-location="Českomalínská">Českomalínská</button>
+      <button class="tab" data-location="Na Marně">Na Marně</button>
+      <button class="tab" data-location="Vila Braník">Vila Braník</button>
+    </div>
+    <form id="task-form">
+      <input type="text" id="task-title" placeholder="Název úkolu" required>
+      <textarea id="task-description" placeholder="Popis úkolu"></textarea>
+      <input type="date" id="task-due-date">
+      <select id="task-priority">
+        <option value="vysoká">Vysoká</option>
+        <option value="střední" selected>Střední</option>
+        <option value="nízká">Nízká</option>
+      </select>
+      <button type="submit">Přidat úkol</button>
+    </form>
+    <div id="task-list"></div>
+  </div>
+  <script src="/src/js/db.js"></script>
+  <script src="/src/js/ui.js"></script>
+  <script src="/src/js/main.js"></script>
+</body>
+</html>
